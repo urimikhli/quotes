@@ -1,0 +1,28 @@
+<h1>Listing quotes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+  <%= form_tag(id: "lookup", method: "get") do %>
+    <div class="field">
+      <%= label_tag :symbol, :Symbol %><br>
+      <%= text_field_tag :symbol %>
+    </div>
+    <div class="actions">
+      <%= submit_tag("Submit",id: "lookup_quote") %>
+    </div>
+  <%end%>
+<p>
+
+  <div id="quote_details">
+  </div>
+</tbody>
+</table>
+
