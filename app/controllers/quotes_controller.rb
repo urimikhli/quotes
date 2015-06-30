@@ -7,7 +7,10 @@ class QuotesController < ApplicationController
   def index
     @quotes = Quote.all
     respond_to :html, :json
-
+    #respond_to do |format|
+    #  format.json { render :json => { disposition: 'attachment'} }
+    #  format.html
+    #end
   end
 
   # GET /quotes/1
